@@ -1,47 +1,32 @@
-## Link al curso completo de Javascript en Youtube:
+# Calculadora de Operaciones Básicas
+
+Este proyecto es una calculadora de operaciones básicas desarrollada con HTML, CSS y JavaScript. Inicialmente fue parte de un curso de JavaScript dictado por Sergie Code y ha sido modificado en su estética y estructura por el autor.
+
+*Link al curso completo de Javascript en Youtube:
 [VIDEO CURSO GRATIS COMPLETO: JavaScript Desde Cero por Sergie Code](https://youtu.be/N8Xt5rP_DUo)
 
-
-# Tutorial de Calculadora en JavaScript
+*Tutorial de Calculadora en JavaScript
 
 Link para ver resultado: [CALCULADORA TRABAJO TERMINADO](https://calculadora-tutorial-js.netlify.app/)
 
-Este es un tutorial que te guiará a través del proceso de creación de una calculadora utilizando JavaScript. El código HTML y CSS necesario para la interfaz de la calculadora estará disponible en el repositorio, por lo que nos centraremos en explicar el funcionamiento del código JavaScript a continuación.
+## Uso
 
-## Funciones Principales
+La calculadora es fácil de usar. Puedes ingresar números y realizar operaciones básicas como suma, resta, multiplicación y división. A continuación, se presentan las instrucciones básicas:
 
-### `agregarALaPantalla(value)`
 
-Esta función se encarga de agregar el valor proporcionado a la pantalla de la calculadora. Recibe un parámetro `value` que representa el valor que se debe agregar. Utiliza `document.getElementById('pantalla')` para obtener el elemento de la pantalla por su identificador y luego actualiza el valor del campo `value` concatenando el nuevo valor.
+![image](https://github.com/vickygbonorino/Calculadora/assets/133809417/7ed8a98c-8c2a-47f2-9987-e1ff16083481)
 
-    function agregarALaPantalla(value) {
-        document.getElementById('pantalla').value += value;
-    }
+1. Ingresa los números que deseas operar utilizando los botones numéricos.
+2. Selecciona el operador de la operación que deseas realizar (+, -, *, /) usando los botones correspondientes.
+3. Presiona el botón "=" para obtener el resultado de la operación.
+4. Para borrar la pantalla y comenzar una nueva operación, presiona el botón "C" (limpiar).
 
-### `calcular()`
+# Contribución
+Si deseas contribuir a este proyecto, siéntete libre de hacerlo. Puedes realizar una solicitud de extracción (pull request) con tus mejoras o correcciones. Asegúrate de seguir las pautas de estilo de código y documentación si las hay.
 
-La función `calcular()` se ejecuta cuando se presiona el botón de igual (=) en la calculadora. Primero, obtiene el valor actual de la pantalla utilizando `document.getElementById('pantalla').value`. Luego, utiliza la función `eval()` para evaluar la expresión matemática representada por el valor de la pantalla. El resultado se almacena en la variable `result`. Finalmente, se actualiza el valor de la pantalla con el resultado calculado.
+#Autor
+Este proyecto fue desarrollado por Vicky Gonzalez Bonorino.
 
-    function calcular() {
-        const valorPantalla = document.getElementById('pantalla').value;
-        const result = eval(valorPantalla);
-        document.getElementById('pantalla').value = result;
-    }
+#Historial de Versiones
+1.0.0 (25 oct 2023): Primera versión estable de la calculadora.
 
-Es importante tener en cuenta que el uso de `eval()` puede presentar riesgos de seguridad si se permite que los usuarios ingresen código arbitrario. En este caso, asumimos que el código solo se ejecutará en un entorno seguro.
-
-### `limpiarPantalla()`
-
-La función `limpiarPantalla()` se utiliza para borrar el contenido de la pantalla de la calculadora. Simplemente asigna una cadena vacía al campo `value` del elemento de la pantalla.
-
-    function limpiarPantalla() {
-        document.getElementById('pantalla').value = '';
-    }
-
-## Integración con HTML y CSS
-
-Para utilizar estas funciones, asegúrate de tener un elemento HTML con el id "pantalla" que represente la pantalla de la calculadora. Puedes ver el código HTML y CSS correspondiente en los archivos proporcionados en el repositorio.
-
-Recuerda que puedes personalizar la interfaz y agregar más funcionalidades según tus necesidades.
-
-¡Ahora estás listo para crear tu propia calculadora en JavaScript! Sigue este tutorial y diviértete explorando el mundo de la programación web.
