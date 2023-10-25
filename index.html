@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Mi Calculadora Básica</h1>
+    <h2>Por Vicky Gonzalez Bonorino</h2>
+    <div class="calculadora">
+        <input type="text" id="pantalla" readonly>
+        <br>
+
+        <input type="button" value="C" onclick="borrar('')">
+        <input type="button" class="oculto" value="C" onclick="">
+        <input type="button" class="oculto" value="C" onclick="">
+        <input type="button" class="operador" value="/" onclick="agregar('/')">
+        <br>
+
+        <input type="button" value="7" onclick="agregar('7')">
+        <input type="button" value="8" onclick="agregar('8')">
+        <input type="button" value="9" onclick="agregar('9')">
+        <input type="button" class="operador" value="*" onclick="agregar('*')">
+        <br>
+
+        <input type="button" value="4" onclick="agregar('4')">
+        <input type="button" value="5" onclick="agregar('5')">
+        <input type="button" value="6" onclick="agregar('6')">
+        <input type="button" class="operador" value="-" onclick="agregar('-')">
+        <br>
+
+        <input type="button" value="1" onclick="agregar('1')">
+        <input type="button" value="2" onclick="agregar('2')">
+        <input type="button" value="3" onclick="agregar('3')">
+        <input type="button" class="operador" value="+" onclick="agregar('+')">
+        <br>
+
+        <input type="button" value="0" onclick="agregar('0')">
+        <input type="button" class="oculto" value="C" onclick="">
+        <input type="button" value="." onclick="agregar('.')">
+        <input type="button" class="operador" value="=" onclick="calcular('')">
+        
+    </div>
+
+    <footer>Basado en el proyecto realizado durante el curso de JavaScript de Sergie Code.</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
